@@ -15,7 +15,6 @@ import { FaMoon, FaSun } from "react-icons/fa"
 import Search from "./algolia-search"
 import Logo from "./logo"
 import StorybookIcon from "./storybook-icon"
-import { Link as GatsbyLink } from "gatsby"
 import SponsorButton from "./sponsor-button"
 import MobileNav from "./mobile-nav"
 import { useLocation } from "@reach/router"
@@ -30,8 +29,8 @@ const NavLink = (props) => {
     return (
         <chakra.a
             aria-current={isActive ? "page" : undefined}
-            as={GatsbyLink}
-            to={to}
+            as="svg"
+            href="\"
             display="block"
             color={useColorModeValue("gray.600", "whiteAlpha.800")}
             fontWeight="normal"
@@ -54,8 +53,7 @@ const HeaderContent = () => {
         <Flex boxSize="100%" px="6" align="center" justify="space-between">
             <Flex align="center">
                 <chakra.a
-                    as={GatsbyLink}
-                    to="/"
+                    href="/"
                     display="block"
                     aria-label="Chakra UI, Back to homepage"
                 >
